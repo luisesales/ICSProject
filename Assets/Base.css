@@ -1,0 +1,7 @@
+.grad{
+    background-image: linear-gradient(to bottom, #006EF5, #358FFE);
+    background-repeat: no-repeat;
+}
+.b-bluelight{
+    border: solid 1px #7DB0F0;
+}
