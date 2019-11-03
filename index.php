@@ -18,28 +18,35 @@
 
     <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="index.php">Inicio <span class="sr-only">(página atual)</span></a>
+            <li class="nav-item">
+                <a class="nav-link text-light" href="index.php">Inicio <span class="sr-only">(página atual)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="admReservas.php">Gerenciar Reservas</a>
+                <a class="nav-link text-light" href="admReservas.php">Gerenciar Reservas</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link " href="admQuartos.php">Gerenciar Quartos</a>
+                <a class="nav-link text-light" href="admQuartos.php">Gerenciar Quartos</a>
             </li>
         </ul>
     </div>
 </nav>
-<div class="container-fluid">
-    <div class="row mx-4 b-bluelight mt-32">
+<div class="container-fluid mt-24">
+    <div class="row mx-8 mt-8 b-bluelight bg-gray">
         <div class="my-8 mx-8">
-            <div class=col-sm-4>
+            <div class="col-sm-5 w-100">
                 <?php //Campo do ID ?>  
                 <span>,</span>
                 <?php//Campo das Estrelas ?>
-                <img src="Assts/Icons/Star.png" >,
+                <img class="s-8" src="Assets/Icons/Star.png" >,
                 <?php//Campo do Local ?>
+            </div>
+            <div class="offset-sm-1 col-sm-2 w-100">
+                Por Apenas
+                <?php //Campo do Preço com a class "text-success" ?>
+            </div>
+            <div class="offset-sm-1 col-sm-2 w-100">
+                <div class="btn btn-warning"><a class="px-8 py-8">Reservar</a></div>
             </div>
         </div>        
     </div>
