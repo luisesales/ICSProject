@@ -31,22 +31,23 @@
         </ul>
     </div>
 </nav>
-<div class="container-fluid mt-24">
-    <div class="row mx-8 mt-8 b-bluelight bg-gray">
-        <div class="my-8 mx-8">
-            <div class="col-sm-5 w-100">
+<div class="mt-24 row">
+    <div class="w-100 mx-32 mt-8 b-bluelight bg-gray">
+        <div class="my-8 mx-8 row">
+            <div class="col-xl-8 col-lg-6 align middle va-center">
                 <?php //Campo do ID ?>  
                 <span>,</span>
                 <?php//Campo das Estrelas ?>
-                <img class="s-8" src="Assets/Icons/Star.png" >,
-                <?php//Campo do Local ?>
+                <img class="s-24" src="Assets/Icons/Star.png" >,
+                <img class="s-16" src="Assets/Icons/PIN.png" >
+                <?php//Campo do Local ?>                
             </div>
-            <div class="offset-sm-1 col-sm-2 w-100">
+            <div class="offset-md-1 col-sm-auto va-center">
                 Por Apenas
                 <?php //Campo do Preço com a class "text-success" ?>
             </div>
-            <div class="offset-sm-1 col-sm-2 w-100">
-                <div class="btn btn-warning"><a class="px-8 py-8">Reservar</a></div>
+            <div class="offset-xl-1 col-sm-auto">
+                <a href="reservas.php"><div class="btn btn-warning"><span class="px-8 py-8 text-primary">Reservar</span></div></a>
             </div>
         </div>        
     </div>
