@@ -34,7 +34,7 @@
 <div class="mt-24 row">
     <div class="w-100 mx-32 mt-8 b-bluelight bg-gray">
         <div class="my-8 mx-8 row">
-            <div class="col-xl-8 col-lg-6 align middle va-center">
+            <div class="col-xl-8 col-lg-6 my-auto">
                 <?php //Campo do ID ?>  
                 <span>,</span>
                 <?php//Campo das Estrelas ?>
@@ -42,12 +42,12 @@
                 <img class="s-16" src="Assets/Icons/PIN.png" >
                 <?php//Campo do Local ?>                
             </div>
-            <div class="offset-md-1 col-sm-auto va-center">
+            <div class="offset-md-1 col-sm-auto my-auto">
                 Por Apenas
                 <?php //Campo do Preço com a class "text-success" ?>
             </div>
             <div class="offset-xl-1 col-sm-auto">
-                <a href="reservas.php"><div class="btn btn-warning"><span class="px-8 py-8 text-primary">Reservar</span></div></a>
+                <a href="reservas.php"><div class="btn btn-warning"><span class="px-8 py-8">Reservar</span></div></a>
             </div>
         </div>        
     </div>
