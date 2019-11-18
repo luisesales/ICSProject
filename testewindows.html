@@ -11,7 +11,35 @@
     <meta charset="UTF-8">
     <title>ICSProject</title>
 </head>
-<body>
+<body class="z-1">
+    <div class="bg-pop z-2 w-100 h-100">
+        <div class="popup z-3 pt-8 pb-16 px-16 mx-auto text-dark w-50 border border-dark">
+            <h4>Insira os dados a Seguir</h4>
+            <div class="row">
+                <div class="col-lg-9 col-12 mt-8">
+                    <h5>Seu Nome</h5>
+                    <textarea class="w-100 s-32" data-input="nome"></textarea>
+                </div>
+                <div class="col-lg-3 col-sm-4  mt-8">
+                        <h5>Quarto</h5>
+                        <input type="text" class="w-100 s-32" disabled data-input="quarto">
+                    </div>                        
+                <div class="col-md-auto mt-8">
+                    <h5>Seu CPF</h5>
+                    <input type="text" class="w-100 s-32" data-input="cpf">
+                </div>
+                <div class="col-md-auto mt-8">
+                        <h5>Nº de Acompanhantes</h5>
+                        <input type="text" class="w-100 s-32 " data-input="acompanhantes">
+                    </div>                                            
+            </div>
+            <div class="row">
+                <div class="ml-auto col-sm-auto">
+                        <a href="reservas.php"><div class="btn btn-warning"><span class="px-8 py-8">Reservar</span></div></a>
+                </div>
+            </div>
+        </div>
+    </div>
 <nav class="navbar navbar-expand-lg navbar-dark grad">
     <a class="navbar-brand" href="index.php">ICS</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">

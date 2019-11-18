@@ -1,0 +1,50 @@
+.icon {
+    margin-left: 8px;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+  }
+  
+
+  .icon-face {
+    vertical-align: middle;
+    background-image: url('../Icons/facebook-brands.svg');    
+  }
+
+  .icon-yout {
+    vertical-align: middle;
+    background-image: url('../Icons/youtube-brands.svg');    
+  }
+  
+  .icon-whats {
+    vertical-align: middle;
+    background-image: url('../Icons/whatsapp-brands.svg');    
+  }
+
+  .icon-twitter {
+    vertical-align: middle;
+    background-image: url('../Icons/twitter-brands.svg');    
+  }
+
+  .icon-google {
+    vertical-align: middle;
+    background-image: url('../Icons/google-plus-g-brands.svg');    
+  }
+
+  .exit{    
+    color: black;
+}
+.exit:hover{
+    color: red;
+    text-decoration: none;        
+}
+
+.exit:hover .icon-exit {
+  background-image: url('../Icons/exith.svg');    
+}
+
+.icon-exit {
+  vertical-align: middle;
+  background-image: url('../Icons/exit.svg');    
+}
