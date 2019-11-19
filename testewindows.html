@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="Assets/Module.css">
     <link rel="stylesheet" href="Assets/Colors.css">
     <script src="Assets/bootstrap-4.1.3-dist/js/bootstrap.js"></script>
+    <script src="Assets/index.js"></script>
     <meta charset="UTF-8">
     <title>ICSProject</title>
 </head>
 <body class="z-1">
-    <div class="bg-pop z-2 w-100 h-100">
+    <div data-pop="0" class="bg-pop z-2 w-100 h-100 d-none">
         <div class="popup z-3 pt-8 pb-16 px-16 mx-auto text-dark w-50 border border-dark">
             <h4>Insira os dados a Seguir</h4>
             <div class="row">
@@ -84,7 +85,7 @@
                 <?php //Campo do Preço com a class "text-success" ?>
             </div>
             <div class="ml-auto col-sm-auto">
-                <a href="reservas.php"><div class="btn btn-warning"><span class="px-8 py-8">Reservar</span></div></a>
+                <a class="call"><div class="btn btn-warning"><span class="px-8 py-8">Reservar</span></div></a>
             </div>
         </div>        
     </div>
