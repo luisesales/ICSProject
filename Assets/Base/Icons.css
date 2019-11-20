@@ -1,4 +1,5 @@
 .icon {
+    cursor: pointer;
     margin-left: 8px;
     display: inline-block;
     width: 24px;
@@ -9,27 +10,30 @@
 
   .icon-face {
     vertical-align: middle;
-    background-image: url('../Icons/facebook-brands.svg');    
+    background-image: url("../Icons/facebook.svg");    
   }
 
   .icon-yout {
     vertical-align: middle;
-    background-image: url('../Icons/youtube-brands.svg');    
+    width: 34px ;
+    background-image: url('../Icons/youtube.svg');    
   }
   
   .icon-whats {
     vertical-align: middle;
-    background-image: url('../Icons/whatsapp-brands.svg');    
+    background-image: url('../Icons/whatsapp.svg');    
   }
 
   .icon-twitter {
     vertical-align: middle;
-    background-image: url('../Icons/twitter-brands.svg');    
+    width: 28px;
+    background-image: url('../Icons/twitter.svg');    
   }
 
   .icon-google {
     vertical-align: middle;
-    background-image: url('../Icons/google-plus-g-brands.svg');    
+    width: 38px;
+    background-image: url('../Icons/google.svg');    
   }
 
   .exit{    
