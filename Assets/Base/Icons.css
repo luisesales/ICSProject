@@ -7,6 +7,9 @@
     background-size: cover;
   }
   
+  .close{
+    vertical-align: middle;
+  }
 
   .icon-face {
     vertical-align: middle;
