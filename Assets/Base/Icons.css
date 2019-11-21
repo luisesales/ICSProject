@@ -55,3 +55,18 @@
   vertical-align: middle;
   background-image: url('../Icons/exit.svg');    
 }
+.tri{
+  width: 0px;
+  height: 0px;
+  border-bottom: solid 10px transparent;
+  border-top: solid 10px transparent;
+  border-right: solid gray 15px;
+}
+.tri:hover{
+  transition: ease-in-out 0.05s;
+  width: 0px;
+  height: 0px;
+  border-left: solid 10px transparent;
+  border-top: solid gray 15px;
+  border-right: solid 10px transparent;
+}
