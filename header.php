@@ -8,11 +8,7 @@
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
                 <a class="nav-link text-light" href="index.php">Inicio <span class="sr-only">(página atual)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-light" href="admReservas.php">Gerenciar Reservas</a>
-            </li>
-
+            </li>            
             <li class="nav-item">
                 <a class="nav-link text-light" href="admQuartos.php">Gerenciar Quartos</a>
             </li>
