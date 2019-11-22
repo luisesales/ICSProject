@@ -37,7 +37,7 @@
                         </div>
                         <div class="row">
                                 <div class="col mt-8">                                
-                                        <input type="text" class="w-100 s-32" id="pass">
+                                        <input type="text" class="w-100 s-32" id="pass" placeholder="">
                                     </div>                                                    
                         </div>
                         <div class="row mt-16">

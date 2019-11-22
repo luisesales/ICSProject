@@ -32,7 +32,7 @@
                     </ul>
                     <ul data-pop="1" class="navbar-nav ml-auto">
                         <li data-function="1" class="nav-item change">
-                            <a class="nav-link btn btn-outline-light enter call" data-function="0" data-item="2">Entrar</a>
+                            <a class="nav-link btn btn-outline-light enter call" data-function="0" data-item="1">Entrar</a>
                         </li>
                     </ul>
                 </div>

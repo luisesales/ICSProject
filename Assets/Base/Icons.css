@@ -8,7 +8,7 @@
   }
   
   .close{
-    vertical-align: middle;
+    vertical-align: top !important;
   }
 
   .icon-face {

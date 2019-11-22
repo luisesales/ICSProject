@@ -46,7 +46,13 @@ $(function() {
             changeclass(1,$($(".navbar-nav")[1]).attr("data-pop"),$(".navbar-nav"),1);
             changeclass(1,$($(".navbar-nav")[2]).attr("data-pop"),$(".navbar-nav"),2);
             changeclass(1,$($(".navbar-nav")[3]).attr("data-pop"),$(".navbar-nav"),3);
+            $("#pass").attr("placeholder","");
+            
         }
+        else{
+            $("#pass").attr("placeholder","Senha Incorreta");
+        }
+        $("#pass").value = "";
     }) 
     $(".search").click(function(){
         if($("#pass").val() != ""){
