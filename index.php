@@ -46,37 +46,52 @@
             </div>
             <div class="row">
                 <div class="ml-auto col-sm-auto">
-                        <a href="reservas.php"><div class="btn btn-warning"><span class="px-8 py-8">Reservar</span></div></a>
+                        <a href="index.php?reservar= <?php echo $row['id_quarto']; ?> " ><div class="btn btn-warning"><span class="px-8 py-8">Reservar</span></div></a>
                 </div>
             </div>
         </div>
-    </div>
-	<nav class="navbar navbar-expand-lg navbar-dark grad">
-	    <a class="navbar-brand" href="index.php">
-                    
-        </a>
-	    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
-	        <span class="navbar-toggler-icon"></span>
-	    </button>
-
-	    <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
-	        <ul class="navbar-nav mr-auto">
-	            <li class="nav-item">
-	                <a class="nav-link text-light" href="index.php">Inicio <span class="sr-only">(página atual)</span></a>
-	            </li>
-	            <li class="nav-item">
-	                <a class="nav-link text-light" href="admQuartos.php">Gerenciar Quartos</a>
-	            </li>
-	            
-	        </ul>
-
-	        <ul class="navbar-nav ml-auto">
-	            <li class="nav-link">
-	                <a class="exit" href="index.php" data-toggle="sair">SAIR<span class="icon icon-exit"></span></a>                
-	            </li>
-	        </ul>
-	    </div>
-	</nav>
+	</div>
+	<div data-pop="0"  class="bg-pop z-2 w-100 h-100 d-none">
+            <div class="popup z-3 pt-8 pb-16 px-16 mx-auto text-dark w-25 border border-dark">            
+                <div class="row p-0">            
+                <h4 class="col-auto order-sm-1 order-2">Insira senha mestra</h4>
+                <button type="button" data-function="0" data-item="1" class="close col-auto call ml-auto order-sm-2 order-1 mr-8" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>            
+                </div>
+                <div class="row">
+                        <div class="col mt-8">
+                                <h5>ID</h5>
+                                <input type="text" class="w-100 s-32" data-input="id">
+                            </div>                                                    
+                </div>
+                <div class="row mt-16">
+                    <div class="ml-auto col-sm-auto">
+                            <a><div class="btn btn-warning"><span class="px-8 py-8">Atualizar</span></div></a>
+                    </div>
+                </div>
+            </div>
+		</div>
+		<div data-pop="0"  class="bg-pop z-2 w-100 h-100 d-none">
+                    <div class="popup z-3 pt-8 pb-16 px-16 mx-auto text-dark w-25 border border-dark">            
+                        <div class="row p-0">            
+                        <h4 class="col-auto order-sm-1 order-2">Insira senha mestra</h4>
+                        <button type="button" data-function="0" data-item="1" class="close col-auto call ml-auto order-sm-2 order-1 mr-8" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>            
+                        </div>
+                        <div class="row">
+                                <div class="col mt-8">                                
+                                        <input type="text" class="w-100 s-32" id="pass">
+                                    </div>                                                    
+                        </div>
+                        <div class="row mt-16">
+                            <div data-function="0" data-item="1" class="ml-auto call col-sm-auto log">
+                                    <a><div class="btn btn-warning"><span class="px-8 py-8">Entrar</span></div></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 	<div class="container-fluid">
 	<div class="mt-24 row">
 		<?php while($row = $result_quarto->fetch_assoc()): ?>
@@ -98,7 +113,7 @@
 	                <span class="text-success"> <?php echo $row['valor_estadia'];?> </span> 
 	            </div>
 	            <div data-function="0" data-item="0" class="ml-auto col-sm-auto call">
-	                <a href="index.php?reservar= <?php echo $row['id_quarto']; ?> " >
+	                <a >
 	                	<div class="btn btn-warning">
 	                		<span class="px-8 py-8">Reservar</span>
 	                	</div>

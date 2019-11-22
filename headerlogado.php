@@ -5,7 +5,7 @@
                 </button>
             
                 <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">    
-                    <ul data-pop="0" class="navbar-nav mr-auto d-none">
+                    <ul data-pop="1" class="navbar-nav mr-auto">
                         <li class="nav-item">
                             <a class="nav-link text-light" href="index.php">Inicio <span class="sr-only">(página atual)</span></a>
                         </li>            
@@ -18,10 +18,10 @@
                     </ul>
                     <ul data-pop="0" class="navbar-nav ml-auto d-none">
                         <li data-function="1" class="nav-link change">
-                            <a class="exit" href="index.php"  data-toggle="sair">SAIR<span class="icon icon-exit "></span></a>                
+                            <a class="exit"  data-toggle="sair">SAIR<span class="icon icon-exit "></span></a>                
                         </li>
                     </ul>
-                    <ul data-pop="1" class="navbar-nav mr-auto">
+                    <ul data-pop="1" class="navbar-nav mr-auto d-none">
                         <li class="nav-item">
                             <a class="nav-link text-light" href="index.php">Inicio <span class="sr-only">(página atual)</span></a>
                         </li>            
@@ -30,9 +30,9 @@
                         </li>
                         
                     </ul>
-                    <ul data-pop="1" class="navbar-nav ml-auto">
-                        <li data-function="1" class="nav-item change">
-                            <a class="nav-link btn btn-outline-light enter call" data-function="0" data-item="2">Entrar</a>
+                    <ul data-pop="0" class="navbar-nav ml-auto d-none">
+                        <li data-function="0" data-item="2" class="nav-item call">
+                            <a class="nav-link btn btn-outline-light enter">Entrar</a>
                         </li>
                     </ul>
                 </div>

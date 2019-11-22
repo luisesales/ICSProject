@@ -40,10 +40,11 @@
   }
 
   .exit{    
-    color: black;
+    color: black !important;
 }
 .exit:hover{
-    color: red;
+    cursor: pointer;
+    color: red !important;
     text-decoration: none;        
 }
 
@@ -69,4 +70,13 @@
   border-left: solid 10px transparent;
   border-top: solid gray 15px;
   border-right: solid 10px transparent;
+}
+
+.enter{
+
+  color: white !important;
+}
+
+.enter:hover{
+  color: black !important;
 }

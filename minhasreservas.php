@@ -16,7 +16,7 @@
                     <h4 class="col-auto">Insira o seu CPF</h4>        
                     </div>
                     <div class="row">
-                            <div class="col mt-8">                                    
+                            <div class="col mt-8">                                                                        
                                     <input type="text" class="w-100 s-32" id="pass">
                                 </div>                                                    
                     </div>
@@ -74,5 +74,5 @@
 </body>
 <script src="Assets/Jquery/jquery-3.4.1.js"></script>
 <script src="Assets/bootstrap-4.1.3-dist/js/bootstrap.js"></script>
- <script src="Assets/index.js"></script>
+<script src="Assets/index.js"></script>
 </html>
