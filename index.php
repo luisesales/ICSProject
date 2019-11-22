@@ -16,7 +16,10 @@
         $mysqli = new mysqli('localhost', 'bruno', '123', 'hotel') or die(myslqi_error($mysqli));
         $result_quarto = $mysqli->query("SELECT * FROM Quarto") or die($mysqli->error);
         $result_hospede = $mysqli->query("SELECT * FROM Hospede") or die($mysqli->error);
+        $sql_hospede = mysqli_query($mysqli, "SELECT * FROM Hospede ORDER BY id DESC LIMIT 1");
+        $rra = mysqli_fetch_row($sql_hospede);
     ?>
+
 	<div data-pop="0" class="bg-pop z-2 w-100 h-100 d-none ">
         <div class="popup z-3 pt-8 pb-16 px-16 mx-auto text-dark w-50 border border-dark">
             
@@ -30,18 +33,18 @@
 
             <div class="row">
                 <form action="process.php" method="POST">
+                    <input type="hidden" name="quarto_id" value="<?php echo $_GET['registro'] ?>">
+
+                    <input type="hidden" name="hospede_id" value="<?php echo $rra[0]+1; ?>">
 
                     <div class="col-lg-9 col-12 mt-8">
                         <h5>Seu Nome</h5>
                         <input type="text" class="w-100 s-32" value="<?php echo $nome; ?>" name="nome">
                     </div>
-                    <!-- <div class="col-lg-3 col-sm-4  mt-8">
-                        <h5>Quarto</h5>
-                        <input type="text" class="w-100 s-32" disabled data-input="quarto">
-                    </div> Bruno esse campo é só para saber qual quarto o usuário ta selecionando ent n é pra tirar ele, vc so deve fazer com que ele pegue o número do quarto selecionado e jogue aqui-->      
+
                     <div class="col-md-auto mt-8">
                         <h5>Seu CPF</h5>
-                        <input type="text" class="w-100 s-32" value="<?php echo $cpf; ?>" name="cpf">
+                        <input type="text" class="w-100 s-32" value="<?php echo $cpf; ?>" maxlength="11" name="cpf">
                     </div>
 
                     <div class="col-md-auto mt-8">
@@ -54,26 +57,6 @@
 
         </div>
     </div>
-    <div data-pop="0"  class="bg-pop z-2 w-100 h-100 d-none">
-            <div class="popup z-3 pt-8 pb-16 px-16 mx-auto text-dark w-25 border border-dark">            
-                <div class="row p-0">            
-                <h4 class="col-auto order-sm-1 order-2">Insira senha mestra</h4>
-                <button type="button" data-function="0" data-item="1" class="close col-auto call ml-auto order-sm-2 order-1 mr-8" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>            
-                </div>
-                <div class="row">
-                        <div class="col mt-8">                                
-                                <input type="text" class="w-100 s-32" id="pass" placeholder="">
-                            </div>                                                    
-                </div>
-                <div class="row mt-16">
-                    <div data-function="0" data-item="1" class="ml-auto call col-sm-auto log">
-                            <a><div class="btn btn-warning"><span class="px-8 py-8">Entrar</span></div></a>
-                    </div>
-                </div>
-            </div>
-        </div>
 	<nav class="navbar navbar-expand-lg navbar-dark grad">
 	    <a class="navbar-brand" href="index.php">
                     
@@ -108,7 +91,7 @@
 	        <div class="my-8 mx-8 row">
 	            <div class="col-xl-8 col-lg-6 my-auto">
 	            	<span>Quarto </span>
-	                <span id="id_quarto"> <?php echo $row['id'];?> </span>
+	                <span> <?php echo $row['id'];?> </span>
 	                <span>, </span>
 	                <span> <?php echo $row['estrelas'];?> </span>
 	                <img class="s-24" src="Assets/Icons/Star.png" >
@@ -121,11 +104,13 @@
 	                <span class="text-success"> <?php echo $row['valor_estadia'];?> </span> 
 	            </div>
 	            <div data-function="0" data-item="0" class="ml-auto col-sm-auto call">
-	                <a href="process.php?reserva_r= <?php echo $row['id']; ?>">
-	                	<div class="btn btn-warning">
-	                		 <span class="px-8 py-8">Reservar</span>
-	                	</div>
-	                </a>
+                    <a>
+                        <a href="index.php?registro= <?php echo $row['id']; ?>" >
+            	                <div class="btn btn-warning">
+            	                    <span class="px-8 py-8">Reservar</span>
+            	                </div>
+                        </a>
+                    </a>
 				</div>
 	        </div>
 	    </div>

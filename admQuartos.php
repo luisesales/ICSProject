@@ -10,6 +10,11 @@
     <title>ICSProject</title>
 </head>
 <body class="z-1">
+    <?php require_once 'process.php'; ?>
+    <?php 
+        $mysqli = new mysqli('localhost', 'bruno', '123', 'hotel') or die(myslqi_error($mysqli));
+        $result_quarto = $mysqli->query("SELECT * FROM Quarto") or die($mysqli->error);
+    ?>
     <div data-pop="0" class="bg-pop z-2 w-100 h-100 d-none ">
         <div class="popup z-3 pt-8 pb-16 px-16 mx-auto text-dark w-50 border border-dark">            
             <div class="row">            
@@ -19,20 +24,34 @@
                 </button>            
             </div>
             <div class="row">
+                <form>
                     <div class="col-lg-3 col-sm-4  mt-8">
-                            <h5>ID</h5>
-                            <input type="text" class="w-100 s-32"  data-input="id">
-                        </div> 
-                <div class=" col-12 mt-8">
-                    <h5>Local</h5>
-                    <textarea class="w-100 s-32" data-input="local"></textarea>
-                </div>                                               
-            </div>
-            <div class="row mt-16">
-                <div class="ml-auto col-sm-auto">
-                        <a href="admQuartos.php"><div class="btn btn-warning" ><span class="px-8 py-8">Criar</span></div></a>
+                        <h5>ID</h5>
+                        <input type="text" class="w-100 s-32"  name="id">
+                    </div> 
+                    <div class=" col-12 mt-8">
+                        <h5>Local</h5>
+                        <input type="text" name="local">
+                    </div>
+                    <div class=" col-12 mt-8">
+                        <h5>Estrelas</h5>
+                        <input type="number" name="estrelas">
+                    </div>  
+                    <div class=" col-12 mt-8">
+                        <h5>Valor</h5>
+                        <input type="number" name="local">
+                    </div>    
                 </div>
-            </div>
+                <div class="row mt-16">
+                    <div class="ml-auto col-sm-auto">
+                            <a href="admQuartos.php">
+                                <div class="btn btn-warning" >
+                                    <button class="px-8 py-8" type="submit">Criar</button>
+                                </div>
+                            </a>
+                    </div>
+                </div>
+                </form>
         </div>
     </div>
     <div data-pop="0"  class="bg-pop z-2 w-100 h-100 d-none">
@@ -100,16 +119,36 @@
         <table class="table">
             <thead class="bg-lightblue text-light">
                 <tr>
-                    <th class="col-1">Quarto</th>
+                    <th class="col-auto">Quarto</th>
                     <th class="col-auto">Local</th>
+                    <th class="col-auto">Estrelas</th>
+                    <th class="col-auto">Valor</th>
+                    <th class="col-auto">Ação</th>
                 </tr>
             </thead>
             <tbody>
+                <?php while($row = $result_quarto->fetch_assoc()): ?>
                 <tr>
-                    <td class="border"><!--Espaço para incluir o dado do id --></td>
-                    <td class="border"><!--Espaço para incluir o dado do local --><div class="tri ml-auto"></div></td>
+                    <td class="border"><?php echo $row['id'];?></td>
+                    <td class="border"><?php echo $row['local'];?></td>
+                    <td class="border"><?php echo $row['estrelas'];?></td>
+                    <td class="border"><?php echo $row['valor_estadia'];?></td>
+                    <td class="border">
+                        <a href="admQuartos.php?editarquarto= <?php echo $row['id']; ?> ">
+                            <div class="btn btn-primary">
+                                <span class="px-8 py-8">Editar</span>
+                            </div>
+                        </a>
+
+                        <a href="process.php?deletarquarto= <?php echo $row['id']; ?>">
+                            <div class="btn btn-danger">
+                                <span class="px-8 py-8">Excluir</span>
+                            </div>
+                        </a>
+                    </td>
                 </tr>
-                <tr data-pop="0" class="sub">
+                <?php endwhile; ?>
+                <!-- <tr data-pop="0" class="sub">
                     <td colspan="2" class="border">
                         <div class="row mx-0">
                         <div data-function="0" data-item="2" class="col-auto call">
@@ -120,7 +159,7 @@
                         </div>
                         </div>
                     </td>
-                </tr>
+                </tr> -->
             </tbody>
         </table>
         <div class="row mt-32">
