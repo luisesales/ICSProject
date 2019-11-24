@@ -21,68 +21,46 @@
     ?>
 
 	<div data-pop="0" class="bg-pop z-2 w-100 h-100 d-none ">
-        <div class="popup z-3 pt-8 pb-16 px-16 mx-auto text-dark w-50 border border-dark">
+        <div class="popup z-3 pt-8 pb-16 px-16 mx-auto text-dark w-50 border border-dark bg-lightblue rounded">
             
-            <div class="row p-0">
+            <div class="row mx-0 text-light">
             
-            <h4 class="col-auto order-sm-1 order-2">Insira os dados a Seguir</h4>
-            <button type="button" data-function="0" data-item="0" class="close col-auto call ml-auto order-sm-2 order-1 mr-8" aria-label="Close">
+                <h4 class="col-auto order-sm-1 order-2 pt-2 px-0">Insira os dados a Seguir</h4>
+                <button type="button" data-function="0" data-item="0" class="close text-light col-auto call ml-auto order-sm-2 order-1" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
-            </button>            
+                </button>            
             </div>
-
-            <div class="row">
+            <!-- -->
+            <div class="row mt-16 mx-0 w-100 text-light">
                 <form action="process.php" method="POST">
-                    <input type="hidden" name="quarto_id" value="<?php echo $_GET['registro'] ?>">
+                    <input type="hidden"  name="quarto_id" value="<?php echo $_GET['registro'] ?>">
 
                     <input type="hidden" name="hospede_id" value="<?php echo $rra[0]+1; ?>">
-
-                    <div class="col-lg-9 col-12 mt-8">
+                <div class="row mx-0 w-100">
+                    <div class="w-100 mx-0 mt-8">
                         <h5>Seu Nome</h5>
-                        <input type="text" class="w-100 s-32" value="<?php echo $nome; ?>" name="nome">
-                    </div>
-
-                    <div class="col-md-auto mt-8">
+                        <input type="text" class="w-100 s-32 input" value="<?php echo $nome; ?>" name="nome">
+                    </div>                                   
+                    <div class="col-auto pl-0 mt-8">
                         <h5>Seu CPF</h5>
-                        <input type="text" class="w-100 s-32" value="<?php echo $cpf; ?>" maxlength="11" name="cpf">
+                        <input type="text" class="w-100 s-32 input" value="<?php echo $cpf; ?>" maxlength="11" name="cpf">
                     </div>
-
-                    <div class="col-md-auto mt-8">
+                    <div class="col-auto  mt-8">
                         <h5>Nº de Pessoas</h5>
-                        <input type="number" class="w-100 s-32 " value="<?php echo $qtd_pessoas; ?>" name="qtd_pessoas">
+                        <input type="number" class="w-100 s-32 input" value="<?php echo $qtd_pessoas; ?>" name="qtd_pessoas">
                     </div>
-                        <button type="submit" name="reservar">Reservar</button>
+                </div>
+                </div>
+                    <div class="row mx-0 mt-16 w-100 ">
+                        <button class="ml-auto btn btn-warning" type="submit" name="reservar">Reservar</button>
+                    </div>
                 </form>
             </div>
-
         </div>
     </div>
-	<nav class="navbar navbar-expand-lg navbar-dark grad">
-	    <a class="navbar-brand" href="index.php">
-                    
-        </a>
-	    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
-	        <span class="navbar-toggler-icon"></span>
-	    </button>
 
-	    <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
-	        <ul class="navbar-nav mr-auto">
-	            <li class="nav-item">
-	                <a class="nav-link text-light" href="index.php">Inicio <span class="sr-only">(página atual)</span></a>
-	            </li>
-	            <li class="nav-item">
-	                <a class="nav-link text-light" href="admQuartos.php">Gerenciar Quartos</a>
-	            </li>
-	            
-	        </ul>
-
-	        <ul class="navbar-nav ml-auto">
-	            <li class="nav-link">
-	                <a class="exit" href="index.php" data-toggle="sair">SAIR<span class="icon icon-exit"></span></a>                
-	            </li>
-	        </ul>
-	    </div>
-	</nav>
+    <?php require_once 'header.php'; ?>
+    
 	<div class="container-fluid">
 	<div class="mt-24 row">
 		<?php while($row = $result_quarto->fetch_assoc()): ?>
@@ -99,13 +77,13 @@
 	                <img class="s-16" src="Assets/Icons/PIN.png" >
 	                <span> <?php echo $row['local'];?> </span>               
 	            </div>
-	            <div class="offset-md-1 col-sm-auto my-auto">
+	            <div class="col-sm-auto my-auto">
 	                Por Apenas R$ 
 	                <span class="text-success"> <?php echo $row['valor_estadia'];?> </span> 
 	            </div>
 	            <div data-function="0" data-item="0" class="ml-auto col-sm-auto call">
                     <a>
-                        <a href="index.php?registro= <?php echo $row['id']; ?>" >
+                        <a  href="index.php?registro= <?php echo $row['id']; ?>">
             	                <div class="btn btn-warning">
             	                    <span class="px-8 py-8">Reservar</span>
             	                </div>
@@ -118,28 +96,10 @@
 		<?php endwhile; ?>
 
 	</div>
-	</div>
-	<nav class="navbar navbar-dark grad mt-32 footer w-100">    
-        <div class="ml-auto">
-            <ul class="navbar nav">
-                <li class="nav-item">
-                    <a class="nav-link text-light" href="#"><span class="icon icon-face"></span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-light" href="#"><span class="icon icon-google"></span></a>
-                </li>    
-                <li class="nav-item">
-                    <a class="nav-link text-light" href="#"><span class="icon icon-yout"></span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-light" href="#"><span class="icon icon-whats"></span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-light" href="#"><span class="icon icon-twitter"></span></a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    </div>
+    
+    <?php require_once 'footer.php'; ?>
+    
 </body>
 <script src="Assets/Jquery/jquery-3.4.1.js"></script>
 <script src="Assets/bootstrap-4.1.3-dist/js/bootstrap.js"></script>

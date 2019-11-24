@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark grad">
-                <a class="navbar-brand" href="index.php">ICS</a>
+                <a class="navbar-brand" href="index.php"><img src="Assets/Images/logohotel.png"></a><a class="navbar-brand" href="index.php"><span class="icon icon-logo"></span></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -18,7 +18,7 @@
                     </ul>
                     <ul data-pop="0" class="navbar-nav ml-auto d-none">
                         <li data-function="1" class="nav-link change">
-                            <a class="exit" href="index.php"  data-toggle="sair">SAIR<span class="icon icon-exit "></span></a>                
+                            <a class="exit"  data-toggle="sair">SAIR<span class="icon icon-exit "></span></a>                
                         </li>
                     </ul>
                     <ul data-pop="1" class="navbar-nav mr-auto">
@@ -31,8 +31,8 @@
                         
                     </ul>
                     <ul data-pop="1" class="navbar-nav ml-auto">
-                        <li data-function="1" class="nav-item change">
-                            <a class="nav-link btn btn-outline-light enter call" data-function="0" data-item="1">Entrar</a>
+                        <li data-function="0" data-item="2" class="nav-item call">
+                            <a class="nav-link btn btn-outline-light enter">Entrar</a>
                         </li>
                     </ul>
                 </div>

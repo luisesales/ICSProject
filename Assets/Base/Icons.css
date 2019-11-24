@@ -4,37 +4,38 @@
     display: inline-block;
     width: 24px;
     height: 24px;
-    background-size: cover;
+    
+    vertical-align: middle;
   }
   
   .close{
     vertical-align: top !important;
   }
 
+  .icon-logo{
+    background-image: url("../Images/logohotel.png");
+  }
+
   .icon-face {
-    vertical-align: middle;
+    
     background-image: url("../Icons/facebook.svg");    
   }
 
   .icon-yout {
-    vertical-align: middle;
     width: 34px ;
     background-image: url('../Icons/youtube.svg');    
   }
   
   .icon-whats {
-    vertical-align: middle;
     background-image: url('../Icons/whatsapp.svg');    
   }
 
   .icon-twitter {
-    vertical-align: middle;
     width: 28px;
     background-image: url('../Icons/twitter.svg');    
   }
 
   .icon-google {
-    vertical-align: middle;
     width: 38px;
     background-image: url('../Icons/google.svg');    
   }
@@ -53,7 +54,6 @@
 }
 
 .icon-exit {
-  vertical-align: middle;
   background-image: url('../Icons/exit.svg');    
 }
 .tri{
@@ -79,4 +79,11 @@
 
 .enter:hover{
   color: black !important;
+}
+
+.circle{  
+  background-size: cover;
+  width: 128px;
+  height: 124px;
+  Transform: translateY(50%);
 }

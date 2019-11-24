@@ -47,6 +47,7 @@
                         </div>
                     </div>
                 </div>
+        <?php require_once 'header.php'; ?>
         <div class="container-fluid">
                 <table class="table mt-24">
                     <thead class="bg-lightblue text-light">
@@ -71,6 +72,8 @@
                         </tr>
                     </tbody>
                 </table>
+        </div>                
+        <?php require_once 'footer.php'; ?>
 </body>
 <script src="Assets/Jquery/jquery-3.4.1.js"></script>
 <script src="Assets/bootstrap-4.1.3-dist/js/bootstrap.js"></script>

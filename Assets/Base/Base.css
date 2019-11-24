@@ -49,3 +49,27 @@
     position: absolute;    
     top: 100%;
 }
+
+.input{
+    background: none;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    color: lightyellow;
+    border-color: white;
+}
+.input:hover{
+    border-color: gray;
+}
+
+.input.error{
+    border-color: red;
+}
+.input.error:hover{
+    border-color: brown;
+}
+
+.login{
+    margin-top: 10%;
+    min-width: 250px;
+}
