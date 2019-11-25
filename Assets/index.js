@@ -10,8 +10,7 @@ $(function() {
             '0': 'd-none',
             '1': '',            
         }
-    }
-   
+    }   
     function changeclass(a,b,c,d){    
         $.each(table[a],function(i,elem){                             
                 if(b == i){                              
@@ -28,6 +27,8 @@ $(function() {
     }
     
     $('.call').click(function(){
+        window.location.href = "teste6windows.html";
+        console.log(this);
         changeclass($(this).attr("data-function"),$($(".bg-pop")[$(this).attr("data-item")]).attr("data-pop"),$(".bg-pop"),$(this).attr("data-item"));
     })    
     $(".tri").click(function(){

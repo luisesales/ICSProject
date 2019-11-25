@@ -20,45 +20,6 @@
         $rra = mysqli_fetch_row($sql_hospede);
     ?>
 
-	<div data-pop="0" class="bg-pop z-2 w-100 h-100 d-none ">
-        <div class="popup z-3 pt-8 pb-16 px-16 mx-auto text-dark w-50 border border-dark bg-lightblue rounded">
-            
-            <div class="row mx-0 text-light">
-            
-                <h4 class="col-auto order-sm-1 order-2 pt-2 px-0">Insira os dados a Seguir</h4>
-                <button type="button" data-function="0" data-item="0" class="close text-light col-auto call ml-auto order-sm-2 order-1" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>            
-            </div>
-            <!-- -->
-            <div class="row mt-16 mx-0 w-100 text-light">
-                <form action="process.php" method="POST">
-                    <input type="hidden"  name="quarto_id" value="<?php echo $_GET['registro'] ?>">
-
-                    <input type="hidden" name="hospede_id" value="<?php echo $rra[0]+1; ?>">
-                <div class="row mx-0 w-100">
-                    <div class="w-100 mx-0 mt-8">
-                        <h5>Seu Nome</h5>
-                        <input type="text" class="w-100 s-32 input" value="<?php echo $nome; ?>" name="nome">
-                    </div>                                   
-                    <div class="col-auto pl-0 mt-8">
-                        <h5>Seu CPF</h5>
-                        <input type="text" class="w-100 s-32 input" value="<?php echo $cpf; ?>" maxlength="11" name="cpf">
-                    </div>
-                    <div class="col-auto  mt-8">
-                        <h5>Nº de Pessoas</h5>
-                        <input type="number" class="w-100 s-32 input" value="<?php echo $qtd_pessoas; ?>" name="qtd_pessoas">
-                    </div>
-                </div>
-                </div>
-                    <div class="row mx-0 mt-16 w-100 ">
-                        <button class="ml-auto btn btn-warning" type="submit" name="reservar">Reservar</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
     <?php require_once 'header.php'; ?>
     
 	<div class="container-fluid">
@@ -81,14 +42,12 @@
 	                Por Apenas R$ 
 	                <span class="text-success"> <?php echo $row['valor_estadia'];?> </span> 
 	            </div>
-	            <div data-function="0" data-item="0" class="ml-auto col-sm-auto call">
-                    <a>
-                        <a  href="pops.php?registro= <?php echo $row['id']; ?>">
+	            <div class="ml-auto col-sm-auto">
+                        <a data-function="0" data-item="0" class="call">
             	                <div class="btn btn-warning">
             	                    <span class="px-8 py-8">Reservar</span>
             	                </div>
                         </a>
-                    </a>
 				</div>
 	        </div>
 	    </div>
