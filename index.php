@@ -33,7 +33,7 @@
             <!-- -->
             <div class="row mt-16 mx-0 w-100 text-light">
                 <form action="process.php" method="POST">
-                    <input type="hidden"  name="quarto_id" value="<?php echo $_GET['registro'] ?>">
+                    <input  name="quarto_id" id="quarto_id">
 
                     <input type="hidden" name="hospede_id" value="<?php echo $rra[0]+1; ?>">
                 <div class="row mx-0 w-100">
@@ -70,7 +70,7 @@
 	            <div class="col-xl-8 col-lg-6 my-auto">
 	            	<span>Quarto </span>
 	                <span> <?php echo $row['id'];?> </span>
-	                <span>, </span>
+	                <span> </span>
 	                <span> <?php echo $row['estrelas'];?> </span>
 	                <img class="s-24" src="Assets/Icons/Star.png" >
 	                <span>, </span>
@@ -81,9 +81,9 @@
 	                Por Apenas R$ 
 	                <span class="text-success"> <?php echo $row['valor_estadia'];?> </span> 
 	            </div>
-	            <div data-function="0" data-item="0" class="ml-auto col-sm-auto call">
+	            <div data-function="0" data-item="0" data-type="0" class="ml-auto col-sm-auto call">
                     <a>
-                        <a  href="pops.php?registro= <?php echo $row['id']; ?>">
+                        <a>
             	                <div class="btn btn-warning">
             	                    <span class="px-8 py-8">Reservar</span>
             	                </div>

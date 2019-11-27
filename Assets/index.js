@@ -1,5 +1,5 @@
-$(function() {
-    const master = "12345678";
+$(function() {    
+    master = "12345678";
     $(".sub").hide();
     let table = {
         '0':{
@@ -27,8 +27,9 @@ $(function() {
     }
     
     $('.call').click(function(){
-        window.location.href = "teste6windows.html";
-        console.log(this);
+        if($(this).attr("data-type") == "0"){
+            $('#quarto_id').html($($($(this).parent().children().children())[1]).val());
+        }
         changeclass($(this).attr("data-function"),$($(".bg-pop")[$(this).attr("data-item")]).attr("data-pop"),$(".bg-pop"),$(this).attr("data-item"));
     })    
     $(".tri").click(function(){
