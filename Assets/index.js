@@ -27,8 +27,11 @@ $(function() {
     }
     
     $('.call').click(function(){
-        if($(this).attr("data-type") == "0"){
-            $('#quarto_id').html($($($(this).parent().children().children())[1]).val());
+        if($(this).attr("data-type") == "0"){           
+            $('#quarto_id').val($(($($(this).parent().children().children()))[1]).text());
+        }
+        if($(this).attr("data-type") == "1"){
+            $('#editid').val($($($(this).parent().parent().parent().parent().children()[0]).children()[0]).text());
         }
         changeclass($(this).attr("data-function"),$($(".bg-pop")[$(this).attr("data-item")]).attr("data-pop"),$(".bg-pop"),$(this).attr("data-item"));
     })    

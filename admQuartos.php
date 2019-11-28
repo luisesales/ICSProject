@@ -16,38 +16,37 @@
         $result_quarto = $mysqli->query("SELECT * FROM Quarto") or die($mysqli->error);
     ?>
     <div data-pop="0" class="bg-pop z-2 w-100 h-100 d-none ">
-        <div class="popup z-3 pt-8 pb-16 px-16 mx-auto text-dark w-50 border border-dark">            
+        <div class="popup z-3 pt-8 pb-16 px-16 mx-auto text-dark w-50 border border-dark bg-lightblue rounded">            
             <div class="row">            
-            <h4 class="col-auto order-sm-1 order-2">Insira os dados a Seguir</h4>
-            <button type="button" data-function="0" data-item="0" class="close col-auto call ml-auto order-sm-2 order-1 mr-8" aria-label="Close">
+            <h4 class="col-auto order-sm-1 order-2 text-light">Insira os dados a Seguir</h4>
+            <button type="button" data-function="0" data-item="0" class="close col-auto call ml-auto order-sm-2 order-1 mr-8 text-light" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>            
             </div>
-            <div class="row">
                 <form>
-                    <div class="col-lg-3 col-sm-4  mt-8">
+            <div class="row text-light">
+
+                    <div class="col-lg-3 col-sm-4 mt-8">
                         <h5>ID</h5>
-                        <input type="text" class="w-100 s-32"  name="id">
+                        <input type="text" class="w-100 s-32 input"  name="id">
                     </div> 
                     <div class=" col-12 mt-8">
                         <h5>Local</h5>
-                        <input type="text" name="local">
+                        <input type="text" class="w-100 s-32 input" name="local">
                     </div>
                     <div class=" col-12 mt-8">
                         <h5>Estrelas</h5>
-                        <input type="number" name="estrelas">
+                        <input type="number" class="w-100 s-32 input" name="estrelas">
                     </div>  
                     <div class=" col-12 mt-8">
                         <h5>Valor</h5>
-                        <input type="number" name="local">
+                        <input type="number" class="w-100 s-32 input" name="local">
                     </div>    
                 </div>
                 <div class="row mt-16">
                     <div class="ml-auto col-sm-auto">
                             <a href="admQuartos.php">
-                                <div class="btn btn-warning" >
-                                    <button class="px-8 py-8" type="submit">Criar</button>
-                                </div>
+                            <button type="submit" class="btn btn-warning" >Criar</button>                                                                    
                             </a>
                     </div>
                 </div>
@@ -55,37 +54,17 @@
         </div>
     </div>
     <div data-pop="0"  class="bg-pop z-2 w-100 h-100 d-none">
-            <div class="popup z-3 pt-8 pb-16 px-16 mx-auto text-dark w-25 border border-dark">            
+            <div class="popup z-3 pt-8 pb-16 px-16 mx-auto text-dark w-25 border border-dark bg-lightblue rounded">            
                 <div class="row p-0">            
-                <h4 class="col-auto order-sm-1 order-2">Insira senha mestra</h4>
-                <button type="button" data-function="0" data-item="1" class="close col-auto call ml-auto order-sm-2 order-1 mr-8" aria-label="Close">
+                <h4 class="col-auto order-sm-1 order-2 text-light">Insira a nova ID</h4>
+                <button type="button" data-function="0" data-item="1" class="close col-auto call ml-auto order-sm-2 order-1 mr-8 text-light" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>            
                 </div>
-                <div class="row">
-                        <div class="col mt-8">                                
-                                <input type="text" class="w-100 s-32" id="pass" placeholder="">
-                            </div>                                                    
-                </div>
-                <div class="row mt-16">
-                    <div data-function="0" data-item="1" class="ml-auto call col-sm-auto log">
-                            <a><div class="btn btn-warning"><span class="px-8 py-8">Entrar</span></div></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <div data-pop="0"  class="bg-pop z-2 w-100 h-100 d-none">
-            <div class="popup z-3 pt-8 pb-16 px-16 mx-auto text-dark w-25 border border-dark">            
-                <div class="row p-0">            
-                <h4 class="col-auto order-sm-1 order-2">Insira a nova ID</h4>
-                <button type="button" data-function="0" data-item="2" class="close col-auto call ml-auto order-sm-2 order-1 mr-8" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>            
-                </div>
-                <div class="row">
+                <div class="row text-light">
                         <div class="col mt-8">
                                 <h5>ID</h5>
-                                <input type="text" class="w-100 s-32" data-input="id">
+                                <input type="text" id="editid" class="w-100 s-32 input" data-input="id">
                             </div>                                                    
                 </div>
                 <div class="row mt-16">
@@ -94,27 +73,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div data-pop="0"  class="bg-pop z-2 w-100 h-100 d-none">
-            <div class="popup z-3 pt-8 pb-16 px-16 mx-auto text-dark w-25 border border-dark">            
-                <div class="row p-0">            
-                <h4 class="col-auto order-sm-1 order-2">Insira senha mestra</h4>
-                <button type="button" data-function="0" data-item="2" class="close col-auto call ml-auto order-sm-2 order-1 mr-8" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>            
-                </div>
-                <div class="row">
-                        <div class="col mt-8">                                
-                                <input type="text" class="w-100 s-32" id="pass">
-                            </div>                                                    
-                </div>
-                <div class="row mt-16">
-                    <div data-function="0" data-item="2" class="ml-auto call col-sm-auto log">
-                            <a><div class="btn btn-warning"><span class="px-8 py-8">Entrar</span></div></a>
-                    </div>
-                </div>
-            </div>
-        </div>    
+        </div>   
         <?php require_once 'header.php'; ?>
     <div class="container-fluid mt-24">
         <table class="table">
@@ -124,7 +83,6 @@
                     <th class="col-auto">Local</th>
                     <th class="col-auto">Estrelas</th>
                     <th class="col-auto">Valor</th>
-                    <th class="col-auto">Ação</th>
                 </tr>
             </thead>
             <tbody>
@@ -133,21 +91,20 @@
                     <td class="border"><?php echo $row['id'];?></td>
                     <td class="border"><?php echo $row['local'];?></td>
                     <td class="border"><?php echo $row['estrelas'];?></td>
-                    <td class="border"><?php echo $row['valor_estadia'];?></td>
-                    <td class="border">
-                        <a href="admQuartos.php?editarquarto= <?php echo $row['id']; ?> ">
-                            <div class="btn btn-primary">
-                                <span class="px-8 py-8">Editar</span>
-                            </div>
-                        </a>
-
-                        <a href="process.php?deletarquarto= <?php echo $row['id']; ?>">
-                            <div class="btn btn-danger">
-                                <span class="px-8 py-8">Excluir</span>
-                            </div>
-                        </a>
-                    </td>
+                    <td class="border"><?php echo $row['valor_estadia'];?> <div class="tri ml-auto"></div></td>                    
                 </tr>
+                <tr data-pop="0" class="sub bg-secondary">
+                            <td colspan="4" class="border">
+                                <div class="row mx-0">
+                                <div data-function="0" data-type="1" data-item="1" class="call col-auto">
+                                        <a><div  class="btn btn-primary"><span class="px-8 py-8">Editar</span></div></a>
+                                </div>
+                                <div class="ml-auto col-auto">
+                                        <a href="process.php?deletarquarto= <?php echo $row['id']; ?>"><div class="btn btn-danger"><span class="px-8 py-8">Excluir</span></div></a>
+                                </div>
+                                </div>
+                            </td>
+                        </tr>
                 <?php endwhile; ?>
                 <!-- <tr data-pop="0" class="sub">
                     <td colspan="2" class="border">

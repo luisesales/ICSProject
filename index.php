@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <title>ICSProject</title>
 </head>
-<body class="z-1">
+<body class="z-1 overflow-auto">
 	<?php require_once 'process.php'; ?>
 
 	<?php 
@@ -31,27 +31,31 @@
                 </button>            
             </div>
             <!-- -->
+            <form action="process.php" method="POST">
             <div class="row mt-16 mx-0 w-100 text-light">
-                <form action="process.php" method="POST">
-                    <input  name="quarto_id" id="quarto_id">
-
+                                   
                     <input type="hidden" name="hospede_id" value="<?php echo $rra[0]+1; ?>">
                 <div class="row mx-0 w-100">
-                    <div class="w-100 mx-0 mt-8">
+                    <div class="col-lg-9 col-12 pl-0 mx-0 mt-8">
                         <h5>Seu Nome</h5>
                         <input type="text" class="w-100 s-32 input" value="<?php echo $nome; ?>" name="nome">
-                    </div>                                   
-                    <div class="col-auto pl-0 mt-8">
+                    </div>   
+                    <div class="col-sm-auto col-12 pl-0 mx-0 mt-8">
+                        <h5>Quarto</h5>
+                        <input  name="quarto_id" disabled class="w-100 s-32 input" id="quarto_id">  
+                    </div>  
+                                                  
+                    <div class="col-sm-auto col-12 pl-0 mt-8">
                         <h5>Seu CPF</h5>
                         <input type="text" class="w-100 s-32 input" value="<?php echo $cpf; ?>" maxlength="11" name="cpf">
                     </div>
-                    <div class="col-auto  mt-8">
+                    <div class="col-sm-auto col-12 pl-0 mt-8">
                         <h5>Nº de Pessoas</h5>
                         <input type="number" class="w-100 s-32 input" value="<?php echo $qtd_pessoas; ?>" name="qtd_pessoas">
                     </div>
                 </div>
                 </div>
-                    <div class="row mx-0 mt-16 w-100 ">
+                    <div class="row mt-16 w-100 ">
                         <button class="ml-auto btn btn-warning" type="submit" name="reservar">Reservar</button>
                     </div>
                 </form>
@@ -69,7 +73,7 @@
 	        <div class="my-8 mx-8 row">
 	            <div class="col-xl-8 col-lg-6 my-auto">
 	            	<span>Quarto </span>
-	                <span> <?php echo $row['id'];?> </span>
+	                <span><?php echo $row['id'];?></span>
 	                <span> </span>
 	                <span> <?php echo $row['estrelas'];?> </span>
 	                <img class="s-24" src="Assets/Icons/Star.png" >
