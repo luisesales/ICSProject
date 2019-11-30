@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="Assets/Base/Base.css">
     <link rel="stylesheet" href="Assets/Base/Icons.css">
     <link rel="stylesheet" href="Assets/Module.css">
-    <link rel="stylesheet" href="Assets/Colors.css">    
+    <link rel="stylesheet" href="Assets/Base/Colors.css">    
     <meta charset="UTF-8">
     <title>ICSProject</title>
 </head>
@@ -51,7 +51,7 @@
                     </div>
                 </div>
                 </form>
-        </div>
+        </d iv>
     </div>
     <div data-pop="0"  class="bg-pop z-2 w-100 h-100 d-none">
             <div class="popup z-3 pt-8 pb-16 px-16 mx-auto text-dark w-25 border border-dark bg-lightblue rounded">            
@@ -105,19 +105,7 @@
                                 </div>
                             </td>
                         </tr>
-                <?php endwhile; ?>
-                <!-- <tr data-pop="0" class="sub">
-                    <td colspan="2" class="border">
-                        <div class="row mx-0">
-                        <div data-function="0" data-item="2" class="col-auto call">
-                                <a ><div class="btn btn-primary"><span class="px-8 py-8">Editar</span></div></a>
-                        </div>
-                        <div data-function="0" class="ml-auto col-auto call">
-                                <a ><div class="btn btn-danger"><span class="px-8 py-8">Excluir</span></div></a>
-                        </div>
-                        </div>
-                    </td>
-                </tr> -->
+                <?php endwhile; ?>                
             </tbody>
         </table>
         <div class="row mt-32">

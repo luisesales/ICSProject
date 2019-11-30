@@ -43,27 +43,31 @@
   .exit{    
     color: black !important;
 }
-.exit:hover{
+
+  .exit:hover{
     cursor: pointer;
     color: red !important;
     text-decoration: none;        
 }
 
-.exit:hover .icon-exit {
+  .exit:hover .icon-exit {
   background-image: url('../Icons/exith.svg');    
 }
 
-.icon-exit {
+  .icon-exit {
   background-image: url('../Icons/exit.svg');    
 }
-.tri{
+
+  .tri{
   width: 0px;
   height: 0px;
   border-bottom: solid 10px transparent;
   border-top: solid 10px transparent;
   border-right: solid gray 15px;
+
 }
-.tri:hover{
+
+  .tri:hover{
   transition: ease-in-out 0.05s;
   width: 0px;
   height: 0px;
@@ -72,16 +76,7 @@
   border-right: solid 10px transparent;
 }
 
-.enter{
-
-  color: white !important;
-}
-
-.enter:hover{
-  color: black !important;
-}
-
-.circle{  
+  .circle{  
   background-size: cover;
   width: 128px;
   height: 124px;

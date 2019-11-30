@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="Assets/Base/Base.css">
     <link rel="stylesheet" href="Assets/Base/Icons.css">
     <link rel="stylesheet" href="Assets/Module.css">
-    <link rel="stylesheet" href="Assets/Colors.css">    
+    <link rel="stylesheet" href="Assets/Base/Colors.css">    
     <meta charset="UTF-8">
     <title>ICSProject</title>
 </head>
