@@ -16,7 +16,7 @@
         $result_quarto = $mysqli->query("SELECT * FROM Quarto") or die($mysqli->error);
     ?>
     <div data-pop="0" class="bg-pop z-2 w-100 h-100 d-none ">
-        <div class="popup z-3 pt-8 pb-16 px-16 mx-auto text-dark w-50 border border-dark bg-lightblue rounded">            
+        <div class="popup z-3 pt-8 pb-16 px-16 mx-auto text-dark w-50 border bg-lightblue rounded">            
             <div class="row">            
             <h4 class="col-auto order-sm-1 order-2 text-light">Insira os dados a Seguir</h4>
             <button type="button" data-function="0" data-item="0" class="close col-auto call ml-auto order-sm-2 order-1 mr-8 text-light" aria-label="Close">
@@ -54,7 +54,7 @@
         </d iv>
     </div>
     <div data-pop="0"  class="bg-pop z-2 w-100 h-100 d-none">
-            <div class="popup z-3 pt-8 pb-16 px-16 mx-auto text-dark w-25 border border-dark bg-lightblue rounded">            
+            <div class="popup z-3 pt-8 pb-16 px-16 mx-auto text-dark w-25 border bg-lightblue rounded">            
                 <div class="row p-0">            
                 <h4 class="col-auto order-sm-1 order-2 text-light">Insira a nova ID</h4>
                 <button type="button" data-function="0" data-item="1" class="close col-auto call ml-auto order-sm-2 order-1 mr-8 text-light" aria-label="Close">

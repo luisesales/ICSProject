@@ -11,13 +11,13 @@
 </head>
 <body class="z-1">
         <div data-pop="1"  class="bg-pop z-2 w-100 h-100 d-block">
-                <div class="popup z-3 pt-8 pb-16 px-16 mx-auto text-dark w-25 border border-dark">            
+                <div class="popup z-3 pt-8 pb-16 px-16 mx-auto text-dark w-25 border rounded bg-lightblue">            
                     <div class="row p-0">            
-                    <h4 class="col-auto">Insira o seu CPF</h4>        
+                    <h4 class="col-auto text-light">Insira o seu CPF</h4>        
                     </div>
                     <div class="row">
                             <div class="col mt-8">                                                                        
-                                    <input type="text" class="w-100 s-32" id="pass">
+                                    <input type="text" class="w-100 s-32 input" id="pass">
                                 </div>                                                    
                     </div>
                     <div class="row mt-16">

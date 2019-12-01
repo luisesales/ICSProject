@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark grad">
-                <a class="navbar-brand" href="index.php"><img src="Assets/Images/logohotel.png"></a><a class="navbar-brand" href="index.php"><span class="icon icon-logo"></span></a>
+                <a class="navbar-brand" href="index.php"><span class="icon icon-logo size-logo-header"></span></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -32,7 +32,7 @@
                     </ul>
                     <ul data-pop="1" class="navbar-nav ml-auto">
                         <li data-function="0" data-item="2" class="nav-item call">
-                            <a class="nav-link btn btn-outline-light enter">Entrar</a>
+                            <a href="login.php" class="nav-link btn btn-outline-light enter">Entrar</a>
                         </li>
                     </ul>
                 </div>
