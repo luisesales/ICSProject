@@ -17,53 +17,9 @@
         $result_quarto = $mysqli->query("SELECT * FROM Quarto") or die($mysqli->error);
         $result_hospede = $mysqli->query("SELECT * FROM Hospede") or die($mysqli->error);
         $sql_hospede = mysqli_query($mysqli, "SELECT * FROM Hospede ORDER BY id DESC LIMIT 1");
-        $rra = mysqli_fetch_row($sql_hospede);
+        $rra = mysqli_fetch_row($sql_hospede);        
     ?>
 
-	<div data-pop="0" class="bg-pop z-2 w-100 h-100 d-none ">
-        <div class="popup z-3 pt-8 pb-16 px-16 mx-auto text-dark w-50 border bg-lightblue rounded">
-            
-            <div class="row mx-0 text-light">
-            
-                <h4 class="col-auto order-sm-1 order-2 pt-2 px-0">Insira os dados a Seguir</h4>
-                <button type="button" data-function="0" data-item="0" class="close text-light col-auto call ml-auto order-sm-2 order-1" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>            
-            </div>
-            <!-- -->
-            <form action="process.php" method="POST">
-            <div class="row mt-16 mx-0 w-100 text-light">
-                                   
-                    <input type="hidden" name="hospede_id" value="<?php echo $rra[0]+1; ?>">
-                <div class="row mx-0 w-100">
-                    <div class="col-lg-9 col-12 pl-0 mx-0 mt-8">
-                        <h5>Seu Nome</h5>
-                        <input type="text" class="w-100 s-32 input" value="<?php echo $nome; ?>" name="nome">
-                    </div>   
-                    <div class="col-sm-auto col-12 pl-0 mx-0 mt-8">
-                        <h5>Quarto</h5>
-                        <input  name="quarto_id" disabled class="w-100 s-32 input" id="quarto_id">  
-                    </div>  
-                                                  
-                    <div class="col-sm-auto col-12 pl-0 mt-8">
-                        <h5>Seu CPF</h5>
-                        <input type="text" class="w-100 s-32 input" value="<?php echo $cpf; ?>" maxlength="11" name="cpf">
-                    </div>
-                    <div class="col-sm-auto col-12 pl-0 mt-8">
-                        <h5>Nº de Pessoas</h5>
-                        <input type="number" class="w-100 s-32 input" value="<?php echo $qtd_pessoas; ?>" name="qtd_pessoas">
-                    </div>
-                </div>
-                </div>
-                    <div class="row mt-16 w-100 ">
-                        <button class="ml-auto btn btn-warning" type="submit" name="reservar">Reservar</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <?php require_once 'header.php'; ?>
     
 	<div class="container-fluid">
 	<div class="mt-24 row">
@@ -87,7 +43,7 @@
 	            </div>
 	            <div data-function="0" data-item="0" data-type="0" class="ml-auto col-sm-auto call">
                     <a>
-                        <a>
+                        <a href="popReserva.php <?php echo $row['id']; ?>">
             	                <div class="btn btn-warning">
             	                    <span class="px-8 py-8">Reservar</span>
             	                </div>
