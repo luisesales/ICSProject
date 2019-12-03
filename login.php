@@ -11,6 +11,23 @@
     </head>
     <body>
     <?php require_once 'header.php'; ?>
+    <div data-pop="0"  class="bg-pop z-2 w-100 h-100 d-none">
+        <div class="popup z-3 pt-8 pb-16 px-16 mx-auto text-dark w-25 border rounded bg-lightblue">            
+            <div class="row p-0">            
+            	<h4 class="col-auto text-light">Insira o seu CPF</h4>        
+            </div>
+        	<div class="row">
+                <div class="col mt-8">                                                                        
+                    <input type="text" class="w-100 s-32 input" id="pass">
+                </div>                                                    
+            </div>
+            <div class="row mt-16">
+                <div class="ml-auto col-sm-auto">
+                    <a data-function="0" data-item="0" class="search"><div class="btn btn-warning"><span class="px-8 py-8">Avançar</span></div></a>
+                </div>
+            </div>
+        </div>
+    </div>
         <div class="container-fluid px-0">
             <form>
                 <div class="login col-md-6 col-sm-5 offset-md-3 offset-sm-3 col-xs-auto offset-xs-0">

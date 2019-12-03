@@ -9,45 +9,25 @@
     <meta charset="UTF-8">
     <title>ICSProject</title>
 </head>
-<body class="z-1">
-        <div data-pop="1"  class="bg-pop z-2 w-100 h-100 d-block">
-                <div class="popup z-3 pt-8 pb-16 px-16 mx-auto text-dark w-25 border rounded bg-lightblue">            
-                    <div class="row p-0">            
-                    <h4 class="col-auto text-light">Insira o seu CPF</h4>        
-                    </div>
-                    <div class="row">
-                            <div class="col mt-8">                                                                        
-                                    <input type="text" class="w-100 s-32 input" id="pass">
-                                </div>                                                    
-                    </div>
-                    <div class="row mt-16">
-                        <div class="ml-auto col-sm-auto">
-                                <a data-function="0" data-item="0" class="search"><div class="btn btn-warning"><span class="px-8 py-8">Avançar</span></div></a>
-                        </div>
-                    </div>
+<body class="z-1">                    
+        <?php require_once 'header.php'; ?>
+    <div data-pop="0"  class="bg-pop z-2 w-100 h-100 d-none">
+        <div class="popup z-3 pt-8 pb-16 px-16 mx-auto text-dark w-25 border rounded bg-lightblue">            
+            <div class="row p-0">            
+            	<h4 class="col-auto text-light">Insira o seu CPF</h4>        
+            </div>
+        	<div class="row">
+                <div class="col mt-8">                                                                        
+                    <input type="text" class="w-100 s-32 input" id="pass">
+                </div>                                                    
+            </div>
+            <div class="row mt-16">
+                <div class="ml-auto col-sm-auto">
+                    <a data-function="0" data-item="0" class="search"><div class="btn btn-warning"><span class="px-8 py-8">Avançar</span></div></a>
                 </div>
             </div>
-            <div data-pop="0"  class="bg-pop z-2 w-100 h-100 d-none">
-                    <div class="popup z-3 pt-8 pb-16 px-16 mx-auto text-dark w-25 border border-dark">            
-                        <div class="row p-0">            
-                        <h4 class="col-auto order-sm-1 order-2">Insira senha mestra</h4>
-                        <button type="button" data-function="0" data-item="1" class="close col-auto call ml-auto order-sm-2 order-1 mr-8" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>            
-                        </div>
-                        <div class="row">
-                                <div class="col mt-8">                                
-                                        <input type="text" class="w-100 s-32" id="pass" placeholder="">
-                                    </div>                                                    
-                        </div>
-                        <div class="row mt-16">
-                            <div data-function="0" data-item="1" class="ml-auto call col-sm-auto log">
-                                    <a><div class="btn btn-warning"><span class="px-8 py-8">Entrar</span></div></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        <?php require_once 'header.php'; ?>
+        </div>
+    </div>
         <div class="container-fluid">
                 <table class="table mt-24">
                     <thead class="bg-lightblue text-light">

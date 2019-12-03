@@ -13,7 +13,7 @@
                             <a class="nav-link text-light" href="admQuartos.php">Gerenciar Quartos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="minhasreservas.php">Minhas reservas</a>
+                            <a class="nav-link text-light call" data-item="0" data-function="0">Minhas reservas</a>
                         </li>
                     </ul>
                     <ul data-pop="0" class="navbar-nav ml-auto d-none">
@@ -26,7 +26,7 @@
                             <a class="nav-link text-light" href="index.php">Inicio <span class="sr-only">(página atual)</span></a>
                         </li>            
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="minhasreservas.php">Minhas reservas</a>
+                            <a class="nav-link text-light call" data-item="0" data-function="0">Minhas reservas</a>
                         </li>
                         
                     </ul>
