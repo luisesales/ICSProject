@@ -20,7 +20,7 @@
 				<button href="index.php" class="close text-light col-auto ml-auto order-sm-2 order-1" aria-label="Close"> <span aria-hidden="true">&times;</span>
 				</button>
 			</div>
-			<?php $mysqli=n ew mysqli( 'localhost', 'bruno', '123', 'hotel2') or die(myslqi_error($mysqli)); $result_quarto=$ mysqli->query("SELECT * FROM Quarto") or die($mysqli->error); $result_hospede = $mysqli->query("SELECT * FROM Hospede") or die($mysqli->error); $sql_hospede = mysqli_query($mysqli, "SELECT * FROM Hospede ORDER BY id DESC LIMIT 1"); $rra = mysqli_fetch_row($sql_hospede); ?>
+			<?php $mysqli=new mysqli( 'localhost', 'bruno', '123', 'hotel2') or die(myslqi_error($mysqli)); $result_quarto=$mysqli->query("SELECT * FROM Quarto") or die($mysqli->error); $result_hospede = $mysqli->query("SELECT * FROM Hospede") or die($mysqli->error); $sql_hospede = mysqli_query($mysqli, "SELECT * FROM Hospede ORDER BY id DESC LIMIT 1"); $rra = mysqli_fetch_row($sql_hospede); ?>
 			<?php if(isset($_POST[ 'idquartoa'])){ $idquartoa=p reg_replace( '/\s+/', '', $_POST[ 'idquartoa']); } ?>
 			<form action="process.php" method="POST">
 				<div class="row mt-16 mx-0 w-100 text-light">

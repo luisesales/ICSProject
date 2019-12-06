@@ -14,7 +14,7 @@
 <body class="z-1">
 	<?php require_once 'headerlogado.php'; ?>
 	<?php require_once 'process.php'; ?>
-	<?php $mysqli=n ew mysqli( 'localhost', 'bruno', '123', 'hotel2') or die(myslqi_error($mysqli)); $result_quarto=$ mysqli->query("SELECT r.id, h.nome, r.quarto_id, q.valor_estadia FROM Reserva r INNER JOIN Hospede h ON h.id = r. hospede_id INNER JOIN Quarto q ON q.id = r.quarto_id ") or die($mysqli->error); ?>
+	<?php $mysqli=new mysqli( 'localhost', 'bruno', '123', 'hotel2') or die(myslqi_error($mysqli)); $result_quarto=$mysqli->query("SELECT r.id, h.nome, r.quarto_id, q.valor_estadia FROM Reserva r INNER JOIN Hospede h ON h.id = r. hospede_id INNER JOIN Quarto q ON q.id = r.quarto_id ") or die($mysqli->error); ?>
 	<div class="container-fluid mt-24">
 		<table class="table">
 			<thead class="bg-lightblue text-light">
@@ -27,7 +27,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<?php while($row=$ result_quarto->fetch_assoc()): ?>
+				<?php while($row=$result_quarto->fetch_assoc()): ?>
 				<tr>
 					<td class="border">
 						<?php echo $row[ 'id'];?>

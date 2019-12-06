@@ -13,7 +13,7 @@
 
 <body class="z-1">
 	<?php require_once 'header.php'; ?>
-	<?php $mysqli=n ew mysqli( 'localhost', 'bruno', '123', 'hotel2') or die(myslqi_error($mysqli)); if(isset($_POST[ 'cpf'])) { $cpf1=$ _POST[ 'cpf']; $result=$ mysqli->query(" SELECT r.id, r.quarto_id, q.local, q.valor_estadia FROM Reserva r INNER JOIN Quarto q ON q.id = r.quarto_id INNER JOIN Hospede h ON h.id = r.hospede_id WHERE h.cpf = '".$cpf1."'") or die($mysqli->error); } ?>
+	<?php $mysqli=new mysqli( 'localhost', 'bruno', '123', 'hotel2') or die(myslqi_error($mysqli)); if(isset($_POST[ 'cpf'])) { $cpf1=$_POST[ 'cpf']; $result=$mysqli->query(" SELECT r.id, r.quarto_id, q.local, q.valor_estadia FROM Reserva r INNER JOIN Quarto q ON q.id = r.quarto_id INNER JOIN Hospede h ON h.id = r.hospede_id WHERE h.cpf = '".$cpf1."'") or die($mysqli->error); } ?>
 	<div data-pop="0" class="bg-pop z-2 w-100 h-100 d-none">
 		<div class="popup z-3 pt-8 pb-16 px-16 mx-auto text-dark w-25 border rounded bg-lightblue">
 			<div class="row p-0">
@@ -45,7 +45,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<?php while($row=$ result->fetch_assoc()): ?>
+				<?php while($row=$result->fetch_assoc()): ?>
 				<tr>
 					<td class="border">
 						<?php echo $row[ 'id'];?>
