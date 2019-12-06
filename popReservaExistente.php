@@ -10,7 +10,8 @@
     <title>ICSProject</title>
 </head>
 <body class="z-1 overflow-auto">
-    <?php require_once 'header.php'; ?>
+    <?php require_once 'header2.php'; ?>
+
     <div data-pop="1" class="bg-pop z-2 w-100 h-100 d-block">
         <div class="popup z-3 pt-8 pb-16 px-16 mx-auto text-dark w-50 border bg-lightblue rounded">
             
