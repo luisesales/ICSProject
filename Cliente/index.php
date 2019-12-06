@@ -14,7 +14,7 @@
 <body class="z-1 overflow-auto">
 	<?php require_once 'header.php'; ?>
 	<?php require_once 'process.php'; ?>
-	<?php $mysqli=n ew mysqli( 'localhost', 'bruno', '123', 'hotel2') or die(myslqi_error($mysqli)); $result_quarto=$ mysqli->query("SELECT * FROM Quarto WHERE id NOT IN ( SELECT quarto_id FROM Reserva )") or die($mysqli->error); ?>
+	<?php $mysqli=new mysqli( 'localhost', 'bruno', '123', 'hotel2') or die(myslqi_error($mysqli)); $result_quarto=$ mysqli->query("SELECT * FROM Quarto WHERE id NOT IN ( SELECT quarto_id FROM Reserva )") or die($mysqli->error); ?>
 	<div data-pop="0" class="bg-pop z-2 w-100 h-100 d-none">
 		<div class="popup z-3 pt-8 pb-16 px-16 mx-auto text-dark w-25 border rounded bg-lightblue">
 			<form action="minhasreservas.php" method="POST">

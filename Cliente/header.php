@@ -9,7 +9,7 @@
 			</li>
 		</ul>
 		<ul  class="navbar-nav ml-auto">
-			<li data-function="0" data-item="2" class="nav-item call"> <a href="login.php" class="nav-link btn btn-outline-light enter">Entrar</a>
+			<li class="nav-item "> <a href="login.php" class="nav-link btn btn-outline-light enter">Entrar</a>
 			</li>
 		</ul>
 	</div>
