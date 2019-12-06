@@ -37,7 +37,7 @@
                     <tr data-pop="0" class="sub bg-secondary">
                         <td colspan="4" class="border">
                             <div class="row mx-0">
-                                <div data-function="0" data-type="1" data-item="1" class="call col-auto">
+                                <div class="col-auto">
 
                                     <a href="popAddQuarto.php?editarquarto= <?php echo $row['id']; ?>">
                                         <div  class="btn btn-primary">

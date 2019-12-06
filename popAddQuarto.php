@@ -17,7 +17,7 @@
     <div class="popup z-3 pt-8 pb-16 px-16 mx-auto text-dark w-50 border bg-lightblue rounded">            
         <div class="row">            
             <h4 class="col-auto order-sm-1 order-2 text-light">Insira os dados a Seguir</h4>
-            <button  href="admQuartos.php" type="button" data-function="0" data-item="0" class="close col-auto call ml-auto order-sm-2 order-1 mr-8 text-light" aria-label="Close">
+            <button  href="admQuartos.php" type="button" class="close col-auto ml-auto order-sm-2 order-1 mr-8 text-light" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>            
         </div>
@@ -51,7 +51,7 @@
                         </div>
                         <?php else: ?>
                             <div class="ml-auto col-sm-auto">
-                                <button type="submit" class="btn btn-warning" name="criarquarto">Criar</button>
+                                <a href="admQuartos.php"><button type="submit" class="btn btn-warning" name="criarquarto">Criar</button></a>
                             </div>
                         <?php endif; ?>
                     </div>

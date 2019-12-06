@@ -43,7 +43,7 @@
           <?php while($row = $result_quarto->fetch_assoc()): ?>
 
            <div class="w-100 mx-24 mt-8 b-bluelight bg-gray">
-               <div class="my-8 mx-8 row">
+               <div class="mt-8 mx-8 row">
                    <div class="col-xl-8 col-lg-6 my-auto">
                       <span>Quarto </span>
                       <span><?php echo $row['id'];?></span>
@@ -54,27 +54,30 @@
                       <img class="s-16" src="Assets/Icons/PIN.png" >
                       <span> <?php echo $row['local'];?> </span>               
                   </div>
-                  <div class="col-sm-auto my-auto">
+                  <div class="col-sm-auto ml-auto">
                    Por Apenas 
                    <span class="text-success"> R$: <?php echo $row['valor_estadia'];?> </span> 
+                  </div>
                </div>
-               <div data-function="0" data-item="0" data-type="0" class="ml-auto col-sm-auto call">
-
+               
+                <div class="row mt-16 mb-8 mx-8">                
+                <div class="col-sm-auto">
+               <form action="popReservaExistente.php" method="POST">
+                <input type="hidden" name="idquartoa" value=" <?php echo $row['id']; ?> ">
+                <button type="submit" class="btn btn-secondary text-light" name="reservarexistente">
+                    <span class="px-8 py-8">Reservar Com Cadastro Existente</span>
+                </button>
+                </div>
+                <div class="col-sm-auto ml-auto">
                 <form action="popReserva.php" method="POST">
                     <input type="hidden" name="idquarto" value=" <?php echo $row['id']; ?> ">
                     <button type="submit" class="btn btn-warning" name="reservar">
                        <span class="px-8 py-8">Reservar</span>
                    </button>
                </form>
-
-               <form action="popReservaExistente.php" method="POST">
-                <input type="hidden" name="idquartoa" value=" <?php echo $row['id']; ?> ">
-                <button type="submit" class="btn btn-warning" name="reservarexistente">
-                    <span class="px-8 py-8">Reservar Com Cadastro Existente</span>
-                </button>
+                </div>
             </form>
             
-        </div>
     </div>
 </div>
 

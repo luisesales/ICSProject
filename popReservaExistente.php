@@ -17,7 +17,7 @@
             <div class="row mx-0 text-light">
                 
                 <h4 class="col-auto order-sm-1 order-2 pt-2 px-0">Insira os dados a Seguir</h4>
-                <button href="index.php" data-function="0" data-item="0" class="close text-light col-auto call ml-auto order-sm-2 order-1" aria-label="Close">
+                <button href="index.php" class="close text-light col-auto ml-auto order-sm-2 order-1" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>            
             </div>
@@ -52,7 +52,7 @@
                     </div>
                 </div>
                 <div class="row mt-16 w-100 ">
-                    <button class="ml-auto btn btn-warning" type="submit" name="fazerreservaexistente">Reservar</button>
+                    <a href="index.php"><button class="ml-auto btn btn-warning" type="submit" name="fazerreservaexistente">Reservar</button></a>
                 </div>
             </form>
         </div>
