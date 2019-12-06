@@ -1,5 +1,4 @@
-$(function() {
-    const master = "12345678";
+$(function() {           
     $(".sub").hide();
     let table = {
         '0':{
@@ -10,8 +9,7 @@ $(function() {
             '0': 'd-none',
             '1': '',            
         }
-    }
-   
+    }   
     function changeclass(a,b,c,d){    
         $.each(table[a],function(i,elem){                             
                 if(b == i){                              
@@ -27,13 +25,21 @@ $(function() {
             else {$(a).slideDown(1);}    
     }
     
-    $('.call').click(function(){
+    $('.call').click(function(quarto){
+        /*if($(this).attr("data-type") == "0"){
+            window.location.href = "index.php?id="+$(($($(this).parent().children().children()))[1]).text();           
+            $('#quarto_id').val($(($($(this).parent().children().children()))[1]).text());
+        }
+        if($(this).attr("data-type") == "1"){
+            window.location.href = "admQuartos.php?id="+$($($(this).parent().parent().parent().parent().children()[0]).children()[0]).text(); 
+            $('#editid').val($($($(this).parent().parent().parent().parent().children()[0]).children()[0]).text());
+        }*/
         changeclass($(this).attr("data-function"),$($(".bg-pop")[$(this).attr("data-item")]).attr("data-pop"),$(".bg-pop"),$(this).attr("data-item"));
     })    
     $(".tri").click(function(){
         ShowHideArea($(".sub"));
     })
-    $(".change").click(function(){
+    /*$(".change").click(function(){
         changeclass($(this).attr("data-function"),$($(".navbar-nav")[0]).attr("data-pop"),$(".navbar-nav"),0);
         changeclass($(this).attr("data-function"),$($(".navbar-nav")[1]).attr("data-pop"),$(".navbar-nav"),1);
         changeclass($(this).attr("data-function"),$($(".navbar-nav")[2]).attr("data-pop"),$(".navbar-nav"),2);
@@ -53,7 +59,7 @@ $(function() {
             $("#pass").attr("placeholder","Senha Incorreta");
         }
         $("#pass").value = "";
-    }) 
+    })*/ 
     $(".search").click(function(){
         if($("#pass").val() != ""){
             changeclass($(this).attr("data-function"),$($(".bg-pop")[$(this).attr("data-item")]).attr("data-pop"),$(".bg-pop"),$(this).attr("data-item"));
