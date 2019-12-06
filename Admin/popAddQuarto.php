@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-	<link rel="stylesheet" href="Assets/bootstrap-4.1.3-dist/css/bootstrap.css">
-	<link rel="stylesheet" href="Assets/Base/Base.css">
-	<link rel="stylesheet" href="Assets/Base/Icons.css">
-	<link rel="stylesheet" href="Assets/Module.css">
-	<link rel="stylesheet" href="Assets/Base/Colors.css">
+	<link rel="stylesheet" href="../Assets/bootstrap-4.1.3-dist/css/bootstrap.css">
+	<link rel="stylesheet" href="../Assets/Base/Base.css">
+	<link rel="stylesheet" href="../Assets/Base/Icons.css">
+	<link rel="stylesheet" href="../Assets/Module.css">
+	<link rel="stylesheet" href="../Assets/Base/Colors.css">
 	<meta charset="UTF-8">
 	<title>ICSProject</title>
 </head>

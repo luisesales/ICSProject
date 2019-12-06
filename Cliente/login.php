@@ -2,11 +2,11 @@
 <html>
 
 <head>
-	<link rel="stylesheet" href="Assets/bootstrap-4.1.3-dist/css/bootstrap.css">
-	<link rel="stylesheet" href="Assets/Base/Base.css">
-	<link rel="stylesheet" href="Assets/Base/Icons.css">
-	<link rel="stylesheet" href="Assets/Module.css">
-	<link rel="stylesheet" href="Assets/Base/Colors.css">
+	<link rel="stylesheet" href="../Assets/bootstrap-4.1.3-dist/css/bootstrap.css">
+	<link rel="stylesheet" href="../Assets/Base/Base.css">
+	<link rel="stylesheet" href="../Assets/Base/Icons.css">
+	<link rel="stylesheet" href="../Assets/Module.css">
+	<link rel="stylesheet" href="../Assets/Base/Colors.css">
 	<meta charset="UTF-8">
 	<title>ICSProject</title>
 </head>
@@ -37,7 +37,7 @@
 	<div class="container-fluid px-0">
 		<div class="login col-md-6 col-sm-5 offset-md-3 offset-sm-3 col-xs-auto offset-xs-0">
 			<div class="circle mb-1 rounded-circle mx-auto border">
-				<img src="Assets/Images/logohotel.png" style=" width: 128px; height: 124px; ">
+				<img src="../Assets/Images/logohotel.png" style=" width: 128px; height: 124px; ">
 			</div>
 			<div class="rounded bg-lightblue text-light px-16 pt-64 pb-16">
 				<form action="#" method="POST">

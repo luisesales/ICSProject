@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-	<link rel="stylesheet" href="Assets/bootstrap-4.1.3-dist/css/bootstrap.css">
-	<link rel="stylesheet" href="Assets/Base/Base.css">
-	<link rel="stylesheet" href="Assets/Base/Icons.css">
-	<link rel="stylesheet" href="Assets/Module.css">
-	<link rel="stylesheet" href="Assets/Base/Colors.css">
+	<link rel="stylesheet" href="../Assets/bootstrap-4.1.3-dist/css/bootstrap.css">
+	<link rel="stylesheet" href="../Assets/Base/Base.css">
+	<link rel="stylesheet" href="../Assets/Base/Icons.css">
+	<link rel="stylesheet" href="../Assets/Module.css">
+	<link rel="stylesheet" href="../Assets/Base/Colors.css">
 	<meta charset="UTF-8">
 	<title>ICSProject</title>
 </head>
@@ -44,8 +44,8 @@
 						<span><?php echo $row['id'];?></span>
 						<span>, </span>
 						<span> <?php echo $row['estrelas'];?> </span>
-						<img class="s-24" src="Assets/Icons/Star.png"> <span>, </span>
-						<img class="s-16" src="Assets/Icons/PIN.png"> <span> <?php echo $row['local'];?> </span>
+						<img class="s-24" src="../Assets/Icons/Star.png"> <span>, </span>
+						<img class="s-16" src="../Assets/Icons/PIN.png"> <span> <?php echo $row['local'];?> </span>
 					</div>
 					<div class="col-sm-auto ml-auto"> <span class="text-success"> R$: <?php echo $row['valor_estadia'];?> </span>
 						<p style="font-family: consolas; font-size: 12px; color: gray;">por noite</p>
@@ -73,8 +73,8 @@
 	</div>
 	<?php require_once 'footer.php'; ?>
 </body>
-<script src="Assets/Jquery/jquery-3.4.1.js"></script>
-<script src="Assets/bootstrap-4.1.3-dist/js/bootstrap.js"></script>
-<script src="Assets/index.js"></script>
+<script src="../Assets/Jquery/jquery-3.4.1.js"></script>
+<script src="../Assets/bootstrap-4.1.3-dist/js/bootstrap.js"></script>
+<script src="../Assets/index.js"></script>
 
 </html>
