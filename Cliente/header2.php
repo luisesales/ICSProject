@@ -7,7 +7,7 @@
 			</li>
 		</ul>
 		<ul class="navbar-nav ml-auto">
-			<li class="nav-item "> <a href="login.php" class="nav-link btn btn-outline-light">Entrar</a>
+			<li class="nav-item "> <a href="../Admin/index.php" class="nav-link btn btn-outline-light">Entrar</a>
 			</li>
 		</ul>
 	</div>

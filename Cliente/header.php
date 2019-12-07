@@ -5,11 +5,11 @@
 		<ul class="navbar-nav mr-auto">
 			<li class="nav-item"> <a class="nav-link text-light" href="index.php">Inicio <span class="sr-only">(página atual)</span></a>
 			</li>
-			<li class="nav-item"> <a class="nav-link text-light " style="cursor: pointer;">Minhas reservas</a>
+			<li class="nav-item"> <a class="nav-link text-light ">Minhas reservas</a>
 			</li>
 		</ul>
 		<ul  class="navbar-nav ml-auto">
-			<li class="nav-item "> <a href="login.php" class="nav-link btn btn-outline-light enter">Entrar</a>
+		<li class="nav-item "> <a href="../Admin/index.php" class="nav-link btn btn-outline-light">Entrar</a>
 			</li>
 		</ul>
 	</div>
